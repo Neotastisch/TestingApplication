@@ -1,5 +1,10 @@
-function main() {
-    console.log("Deployment successful - running app");
-}
+const express = require('express');
+const app = express();
 
-setInterval(main, 1000);
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
